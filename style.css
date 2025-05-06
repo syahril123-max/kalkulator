@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px;
+}
+
+.calculator {
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px; /* Memperbesar ukuran maksimal kalkulator */
+}
+
+input[type="text"] {
+  width: 100%;
+  font-size: 2em; /* Memperbesar ukuran font input */
+  padding: 15px;
+  margin-bottom: 15px;
+  text-align: right;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  padding: 20px; /* Memperbesar padding tombol */
+  font-size: 1.5em; /* Memperbesar ukuran font tombol */
+  border: none;
+  border-radius: 10px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.1s;
+  touch-action: manipulation;
+  min-height: 60px; /* Menambah tinggi minimum tombol */
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button.operator {
+  background: #2196F3;
+}
+
+button.trig {
+  background: #FF9800;
+}
+
+button.clear {
+  background: #f44336;
+}
+
+/* Responsif untuk layar mobile */
+@media screen and (max-width: 480px) {
+  .calculator {
+    padding: 12px;
+  }
+  
+  button {
+    padding: 15px;
+    font-size: 1.3em; /* Memperbesar font untuk mobile */
+    min-height: 50px;
+  }
+  
+  input[type="text"] {
+    font-size: 1.8em; /* Memperbesar font input untuk mobile */
+    padding: 12px;
+  }
+}
+
+/* Responsif untuk layar sangat kecil */
+@media screen and (max-width: 320px) {
+  .calculator {
+    padding: 10px;
+  }
+  
+  .buttons {
+    gap: 8px;
+  }
+  
+  button {
+    padding: 12px;
+    font-size: 1.2em;
+    min-height: 45px;
+  }
+}
